@@ -16,3 +16,17 @@ suma = (a, b) => {
   return a - b;
 }; //Arrow Function
 console.log(suma(1, 2));
+
+const ele = document.getElementById("ele1");
+
+function pintar() {
+  ele.style.backgroundColor = "yellow";
+}
+
+ele.addEventListener("click", pintar);
+
+function pintar(event) {
+  event.target.style.backgroundColor = "yellow";
+}
+
+ele.addEventListener("click", pintar); //Improved Version
