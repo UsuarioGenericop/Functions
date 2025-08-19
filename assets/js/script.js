@@ -30,3 +30,11 @@ function pintar(event) {
 }
 
 ele.addEventListener("click", pintar); //Improved Version
+
+function pintar(color = "green") {
+  ele.style.backgroundColor = color;
+}
+pintar();
+ele.addEventListener("click", function () {
+  pintar("yellow");
+}); //Function with argument
