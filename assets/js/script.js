@@ -38,3 +38,15 @@ pintar();
 ele.addEventListener("click", function () {
   pintar("yellow");
 }); //Function with argument
+
+const boxes = document.getElementsByClassName("div"); //Returns HTML collection
+console.log(boxes);
+function negro(box) {
+  box.style.backgroundColor = "black";
+}
+for (let box of boxes) {
+  //Creates variable box and loop to apply the function to each box
+  box.addEventListener("click", function () {
+    negro(box); //Runs the function negro on click
+  });
+}
