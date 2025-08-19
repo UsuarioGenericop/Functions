@@ -45,8 +45,27 @@ function negro(box) {
   box.style.backgroundColor = "black";
 }
 for (let box of boxes) {
-  //Creates variable box and loop to apply the function to each box
+  //Creates variable box in each iteration of the loop and loops to apply the function to each box
   box.addEventListener("click", function () {
     negro(box); //Runs the function negro on click
   });
-}
+} //Function on multiple HTML elements with the same class name
+
+const container = document.getElementById("change");
+var a = "green";
+var s = "orange";
+var d = "skyblue";
+var keystroke = undefined; // Each key modifies the value of the global function keystroke
+document.addEventListener("keydown", function (event) {
+  if (event.key === "a") {
+    keystroke = "pink";
+    container.style.backgroundColor = a; // Value "a" can be replaced with keystroke
+  } else if (event.key === "s") {
+    keystroke = "orange";
+    container.style.backgroundColor = s; // Value "s" can be replaced with keystroke
+  } else if (event.key === "d") {
+    keystroke = "skyblue";
+    container.style.backgroundColor = d; // Value "d" can be replaced with keystroke
+  }
+  console.log(keystroke);
+}); // Function on event
