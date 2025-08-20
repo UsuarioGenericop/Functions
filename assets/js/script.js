@@ -66,6 +66,34 @@ document.addEventListener("keydown", function (event) {
   } else if (event.key === "d") {
     keystroke = "skyblue";
     container.style.backgroundColor = d; // Value "d" can be replaced with keystroke
-  }
+  } else if (event.key === "q") {
+    let myDiv = document.createElement("div"); //Creates new element but only in storage
+    myDiv.style.backgroundColor = "purple";
+    myDiv.style.width = "200px";
+    myDiv.style.height = "200px";
+    myDiv.style.border = "solid 1px";
+    myDiv.style.borderColor = "black"; // Defines its properties
+    document.body.appendChild(myDiv); // Allows it to be displayed
+    keystroke = "new div1";
+  } else if (event.key === "w") {
+    let myDiv = document.createElement("div");
+    myDiv.style.backgroundColor = "grey";
+    myDiv.style.width = "200px";
+    myDiv.style.height = "200px";
+    myDiv.style.border = "solid 1px";
+    myDiv.style.borderColor = "black";
+    document.body.appendChild(myDiv);
+    keystroke = "new div2";
+  } else if (event.key === "e") {
+    let myDiv = document.createElement("div");
+    myDiv.style.backgroundColor = "brown";
+    myDiv.style.width = "200px";
+    myDiv.style.height = "200px";
+    myDiv.style.border = "solid 1px";
+    myDiv.style.borderColor = "black";
+    document.body.appendChild(myDiv);
+    keystroke = "new div3"; // Repeat three times with diferent keys
+  } // Function that creates an element
   console.log(keystroke);
 }); // Function on event
+// All tied to a single addEventListener
