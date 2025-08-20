@@ -91,7 +91,8 @@ document.addEventListener("keydown", function (event) {
     myDiv.style.height = "200px";
     myDiv.style.border = "solid 1px";
     myDiv.style.borderColor = "black";
-    document.body.appendChild(myDiv);
+    // The line  container.appendChild(myDiv) creates the new element as a child of the variable container specified on line 54
+    document.body.appendChild(myDiv); // Whereas this line creates the new element as a child of the body
     keystroke = "new div3"; // Repeat three times with diferent keys
   } // Function that creates an element
   console.log(keystroke);
