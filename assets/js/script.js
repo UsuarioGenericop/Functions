@@ -12,6 +12,7 @@ let suma = function (a, b) {
   return a + b;
 };
 console.log(suma(1, 2));
+
 suma = (a, b) => {
   return a - b;
 }; //Arrow Function
@@ -19,18 +20,22 @@ console.log(suma(1, 2));
 
 const ele = document.getElementById("ele1");
 
-function pintar() {
-  ele.style.backgroundColor = "yellow";
+// function pintar1() {
+//   ele.style.backgroundColor = "yellow";
+// }
+
+// ele.addEventListener("click", pintar1);
+
+function pintar2(event) {
+  console.log("pintar de rojo");
+  event.style.backgroundColor = "red";
 }
 
-ele.addEventListener("click", pintar);
-
-function pintar(event) {
-  event.target.style.backgroundColor = "yellow";
-}
-
-ele.addEventListener("click", pintar); //Improved Version
-
+ele.addEventListener("click", () => pintar2(ele)); // A function needs to be called as an arrow function when used insde an AddEventListner
+ele.addEventListener("click", function () {
+  pintar2(ele);
+  console.log("pintar de rojo con funcion anonima");
+}); // Otherwise it needs to be called inside another function
 function pintar(color = "green") {
   ele.style.backgroundColor = color;
 }
@@ -92,7 +97,7 @@ document.addEventListener("keydown", function (event) {
     myDiv.style.border = "solid 1px";
     myDiv.style.borderColor = "black";
     // The line  container.appendChild(myDiv) creates the new element as a child of the variable container specified on line 54
-    document.body.appendChild(myDiv); // Whereas this line creates the new element as a child of the body
+    document.querySelector(".thirdPoint").appendChild(myDiv); // Whereas this line creates the new element as a child of the body
     keystroke = "new div3"; // Repeat three times with diferent keys
   } // Function that creates an element
   console.log(keystroke);
